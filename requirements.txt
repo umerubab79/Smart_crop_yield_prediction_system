@@ -1,65 +1,56 @@
-# Backend
+
 fastapi
 uvicorn[standard]
 
-# Frontend
+
 streamlit
 requests
 
-# Data Science & ML
+
 numpy
 pandas
 scikit-learn
 xgboost
 joblib
 
-# Database
+
 sqlalchemy
 psycopg2-binary
 alembic
 
-# Authentication & Security
+
 python-jose[cryptography]
 passlib[bcrypt]
 python-multipart
 bcrypt
 
-# Environment Variables
+
 python-dotenv
 
-# Validation
+
 pydantic
 pydantic-settings
 email-validator
 
-# Reports
+
 reportlab
 
-# Charts & Dashboard
+
 plotly
 matplotlib
 
-# Excel Support
+
 openpyxl
 xlsxwriter
 
-# Date & Time
+
 python-dateutil
 
-# API Testing
+
 httpx
 
-# Logging
+
 loguru
 
-# Utilities
-typing-extensions
 
-#enviroment active command ==> & "D:\ai_developer\ml_project\ml_global\Scripts\Activate.ps1"
-'''User Input
-Country
-Crop
-Year
-Rainfall
-Pesticides
-Temperature'''
+typing-extensions
