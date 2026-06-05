@@ -47,7 +47,7 @@ st.write("")
 try:
 
     response = requests.get(
-        "http://127.0.0.1:8000/history"
+        "https://smart-crop-yield-prediction-system.onrender.com/login"
     )
 
     data = response.json()

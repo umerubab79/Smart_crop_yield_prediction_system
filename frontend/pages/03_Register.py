@@ -115,7 +115,7 @@ if submit:
         try:
 
             response = requests.post(
-                "http://127.0.0.1:8000/register",
+                "https://smart-crop-yield-prediction-system.onrender.com/login",
                 json=payload
             )
 
