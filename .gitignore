@@ -2,7 +2,6 @@ venv/
 ml_global/
 __pycache__/
 *.pyc
-*.pkl
 *.db
 .env
 .streamlit/secrets.toml
