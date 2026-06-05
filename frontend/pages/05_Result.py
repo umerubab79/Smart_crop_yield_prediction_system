@@ -113,7 +113,7 @@ with col1:
     ):
 
         st.switch_page(
-            "pages/02_Prediction.py"
+            "pages/04_Prediction.py"
         )
 
 with col2:
