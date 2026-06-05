@@ -5,27 +5,42 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-# SQLite Database Path
-DATABASE_URL = "sqlite:///./database/crop_prediction.db"
+# ==========================================
+# SQLite Database
+# ==========================================
 
-# Create Database Engine
+# Render aur local dono par work karega
+DATABASE_URL = "sqlite:///./crop_prediction.db"
+
+# ==========================================
+# Create Engine
+# ==========================================
+
 engine = create_engine(
     DATABASE_URL,
     connect_args={"check_same_thread": False}
 )
 
-# Database Session
+# ==========================================
+# Session Factory
+# ==========================================
+
 SessionLocal = sessionmaker(
     autocommit=False,
     autoflush=False,
     bind=engine
 )
 
-# Base Class For Models
+# ==========================================
+# Base Model
+# ==========================================
+
 Base = declarative_base()
 
+# ==========================================
+# Database Dependency
+# ==========================================
 
-# Dependency Function
 def get_db():
     db = SessionLocal()
 
