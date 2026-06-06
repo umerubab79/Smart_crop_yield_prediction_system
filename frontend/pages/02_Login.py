@@ -95,6 +95,8 @@ if submit:
                 "https://smart-crop-yield-prediction-system.onrender.com/login",
                 json=payload
             )
+            st.write("Status Code:", response.status_code)
+            st.write("Response Text:", response.text)
 
             if response.status_code == 200:
 

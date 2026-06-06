@@ -110,6 +110,8 @@ if submit:
                 json=payload,
                 timeout=30
             )
+            st.write("Status Code:", response.status_code)
+            st.write("Response:", response.text)
 
             if response.status_code == 200:
 
