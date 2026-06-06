@@ -4,6 +4,7 @@
 
 import streamlit as st
 import requests
+import time
 
 from utils.style import apply_style
 
@@ -42,29 +43,29 @@ st.write("")
 with st.form("register_form"):
 
     full_name = st.text_input(
-        "Full Name"
+        "👤 Full Name"
     )
 
     username = st.text_input(
-        "Username"
+        "🆔 Username"
     )
 
     email = st.text_input(
-        "Email"
+        "📧 Email"
     )
 
     password = st.text_input(
-        "Password",
+        "🔒 Password",
         type="password"
     )
 
     confirm_password = st.text_input(
-        "Confirm Password",
+        "🔒 Confirm Password",
         type="password"
     )
 
     submit = st.form_submit_button(
-        "Register"
+        "✅ Register"
     )
 
 # ==========================================
@@ -75,33 +76,23 @@ if submit:
 
     if not full_name:
 
-        st.error(
-            "Full Name is required"
-        )
+        st.error("Full Name is required")
 
     elif not username:
 
-        st.error(
-            "Username is required"
-        )
+        st.error("Username is required")
 
     elif not email:
 
-        st.error(
-            "Email is required"
-        )
+        st.error("Email is required")
 
     elif not password:
 
-        st.error(
-            "Password is required"
-        )
+        st.error("Password is required")
 
     elif password != confirm_password:
 
-        st.error(
-            "Passwords do not match"
-        )
+        st.error("Passwords do not match")
 
     else:
 
@@ -115,8 +106,9 @@ if submit:
         try:
 
             response = requests.post(
-                "https://smart-crop-yield-prediction-system.onrender.com/login",
-                json=payload
+                "https://smart-crop-yield-prediction-system.onrender.com/register",
+                json=payload,
+                timeout=30
             )
 
             if response.status_code == 200:
@@ -124,23 +116,31 @@ if submit:
                 st.success(
                     "✅ Registration Successful"
                 )
-                import time
 
                 time.sleep(2)
 
-                st.switch_page("pages/02_Login.py")
-
-                st.info(
-                    "Go to Login Page to continue"
+                st.switch_page(
+                    "pages/02_Login.py"
                 )
 
             else:
 
-                data = response.json()
+                try:
 
-                st.error(
-                    data["detail"]
-                )
+                    data = response.json()
+
+                    st.error(
+                        data.get(
+                            "detail",
+                            "Registration Failed"
+                        )
+                    )
+
+                except:
+
+                    st.error(
+                        f"Server Error: {response.text}"
+                    )
 
         except Exception as e:
 
