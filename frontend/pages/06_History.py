@@ -40,8 +40,8 @@ st.markdown("---")
 
 try:
     response = requests.get(
-    "https://smart-crop-yield-prediction-system.onrender.com/history")
-
+    "https://smart-crop-yield-prediction-system-1.onrender.com/history"
+)
 
     data = response.json()
 
