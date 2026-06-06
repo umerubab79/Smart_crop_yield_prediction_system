@@ -90,11 +90,10 @@ if submit:
         }
 
         try:
-
             response = requests.post(
-                "https://smart-crop-yield-prediction-system.onrender.com/login",
-                json=payload
-            )
+    "https://smart-crop-yield-prediction-system-1.onrender.com/login",
+    json=payload
+)
             st.write("Status Code:", response.status_code)
             st.write("Response Text:", response.text)
 

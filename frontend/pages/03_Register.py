@@ -104,12 +104,11 @@ if submit:
         }
 
         try:
-
             response = requests.post(
-                "https://smart-crop-yield-prediction-system.onrender.com/register",
-                json=payload,
-                timeout=30
+                "https://smart-crop-yield-prediction-system-1.onrender.com/register",
+                json=payload
             )
+
             st.write("Status Code:", response.status_code)
             st.write("Response:", response.text)
 

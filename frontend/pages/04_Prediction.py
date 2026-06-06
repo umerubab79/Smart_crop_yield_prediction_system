@@ -103,7 +103,7 @@ if st.button(
 
     try:
         response = requests.post(
-            "https://smart-crop-yield-prediction-system.onrender.com/predict",
+            "https://smart-crop-yield-prediction-system-1.onrender.com/predict",
             json=payload)
 
 

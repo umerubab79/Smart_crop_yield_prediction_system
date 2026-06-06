@@ -47,9 +47,9 @@ st.write("")
 try:
 
     response = requests.get(
-        "https://smart-crop-yield-prediction-system.onrender.com/login"
+         "https://smart-crop-yield-prediction-system-1.onrender.com"
     )
-
+    
     data = response.json()
 
     df = pd.DataFrame(data)
