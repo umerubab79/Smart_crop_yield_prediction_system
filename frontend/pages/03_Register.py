@@ -16,25 +16,12 @@ apply_style()
 
 st.markdown(
     """
-    <div style="
-        background: rgba(255,255,255,0.85);
-        padding:20px;
-        border-radius:15px;
-        text-align:center;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    ">
-        <h1 style="color:#1E293B;">
-            📝 User Registration
-        </h1>
-
-        <p style="color:#475569;">
-            Create your account to access Smart Crop Yield Prediction System
-        </p>
-    </div>
+    <h1 style="text-align:center;">
+        📝 User Registration
+    </h1>
     """,
     unsafe_allow_html=True
 )
-
 st.write("")
 
 # ==========================================
