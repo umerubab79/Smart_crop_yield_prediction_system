@@ -17,7 +17,6 @@ st.set_page_config(
 # ==========================================
 # Custom CSS
 # ==========================================
-
 st.markdown("""
 <style>
 
@@ -25,9 +24,9 @@ st.markdown("""
 .stApp {
     background: linear-gradient(
         135deg,
-        #E8F5E9,
-        #C8E6C9,
-        #A5D6A7
+        #FFFDF7,
+        #F8F5EE,
+        #F1EDE3
     );
 }
 
@@ -36,7 +35,7 @@ st.markdown("""
     text-align: center;
     font-size: 5rem;
     font-weight: 900;
-    color: #1B5E20;
+    color: #5D4037;
     margin-bottom: 5px;
 }
 
@@ -44,22 +43,23 @@ st.markdown("""
 .subtitle {
     text-align: center;
     font-size: 1.5rem;
-    color: #2E7D32;
+    color: #6D4C41;
     margin-bottom: 30px;
 }
 
 /* Feature Box */
 .feature-box {
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.85);
     padding: 15px;
     border-radius: 15px;
     margin-top: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    color: #1B5E20;
+    color: #5D4037;
     font-size: 16px;
     margin-top: 40px;
 }

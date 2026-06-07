@@ -8,9 +8,9 @@ def apply_style():
     .stApp {
         background: linear-gradient(
             135deg,
-            #E8F5E9,
-            #C8E6C9,
-            #A5D6A7
+            #F8FAFC,
+            #EEF2F7,
+            #E2E8F0
         );
     }
 
@@ -18,13 +18,36 @@ def apply_style():
         text-align: center;
         font-size: 5rem;
         font-weight: 900;
-        color: #1B5E20;
+        color: #1E293B;
     }
 
     .subtitle {
         text-align: center;
         font-size: 1.5rem;
-        color: #2E7D32;
+        color: #475569;
+    }
+
+    h1, h2, h3 {
+        color: #1E293B !important;
+    }
+
+    .stButton > button {
+        background-color: #334155;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+    }
+
+    .stButton > button:hover {
+        background-color: #1E293B;
+        color: white;
+    }
+
+    .stTextInput input,
+    .stNumberInput input,
+    .stSelectbox div[data-baseweb="select"] {
+        border-radius: 10px;
     }
 
     </style>

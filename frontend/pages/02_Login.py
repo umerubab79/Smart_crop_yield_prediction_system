@@ -10,25 +10,14 @@ from utils.style import apply_style
 # ==========================================
 # Apply Theme
 # ==========================================
-
 apply_style()
-
-# ==========================================
-# Page Header
-# ==========================================
 
 st.markdown(
     """
-    <div style="
-        background: linear-gradient(135deg,#1565C0,#1976D2);
-        padding:20px;
-        border-radius:15px;
-        text-align:center;
-        color:white;
-    ">
-        <h1>🔐 User Login</h1>
-        <p>Access Smart Crop Yield Prediction System</p>
-    </div>
+    <h1 class="main-title">🔐 User Login</h1>
+    <p class="subtitle">
+        Access Smart Crop Yield Prediction System
+    </p>
     """,
     unsafe_allow_html=True
 )

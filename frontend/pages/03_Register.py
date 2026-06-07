@@ -14,21 +14,22 @@ from utils.style import apply_style
 
 apply_style()
 
-# ==========================================
-# Page Header
-# ==========================================
-
 st.markdown(
     """
     <div style="
-        background: linear-gradient(135deg,#1B5E20,#2E7D32);
+        background: rgba(255,255,255,0.85);
         padding:20px;
         border-radius:15px;
         text-align:center;
-        color:white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     ">
-        <h1>📝 User Registration</h1>
-        <p>Create your account to access Smart Crop Yield Prediction System</p>
+        <h1 style="color:#1E293B;">
+            📝 User Registration
+        </h1>
+
+        <p style="color:#475569;">
+            Create your account to access Smart Crop Yield Prediction System
+        </p>
     </div>
     """,
     unsafe_allow_html=True
